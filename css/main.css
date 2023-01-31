@@ -1,0 +1,844 @@
+@font-face {
+    font-family: 'perkFont';
+    src: url('../assets/fonts/HogfishDEMO.otf');
+}
+
+@font-face {
+    font-family: 'perkFont2';
+    src: url('../assets/fonts/ArialNarrow.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+    /* Edge */
+    color: #fff;
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #fff;
+}
+
+ ::placeholder {
+    color: #fff;
+}
+
+#restrictPopup1,
+#restrictPopup2 {
+    display: none;
+}
+
+.restrictPopup {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+}
+
+.blackbg {
+    background-color: #000000;
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.res_popup_container {
+    z-index: 1;
+    position: relative;
+}
+
+.res_popup_container img {
+    width: 100%;
+}
+
+.res_popup_container .signPopPup img {
+    width: 20vh;
+    cursor: pointer;
+}
+
+.signPopPup {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -18%);
+}
+
+#formPage,
+#OtpPage,
+#LoginPage,
+#playNowPage {
+    display: none;
+    flex-direction: column;
+}
+
+@media screen and (orientation:portrait) {
+    body {
+        background-color: #000000 !important;
+    }
+}
+
+.userNameData {
+    position: absolute;
+    top: 42%;
+    /* width: 31%; */
+    left: 61%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+    color: #283171;
+    font-family: 'perkFont';
+    z-index: 100000;
+}
+
+.nameIconConatiner {
+    position: relative;
+    text-align: center;
+    top: 2vw;
+}
+
+input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #fff;
+}
+
+input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #fff;
+}
+
+.commonGreen {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    left: 20px;
+    width: 20px;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    font-family: 'perkFont2';
+    font-size: 16px;
+}
+
+@media screen and (orientation:landscape) and (min-device-width: 480px) and (max-device-width: 640px) {}
+
+
+/* @media only screen and (min-device-width: 480px) 
+and (max-device-width: 640px)
+                   and (orientation: landscape) {
+
+                    .perkMainContainer #mainPage #sub-page .title img {
+                        width: 28%;
+                       
+                    }
+} */
+
+
+/* mobile css */
+
+@media only screen and (max-width: 600px) {
+    .green img {
+        width: 5vw !important;
+    }
+    .res_popup_container {
+        width: 50vh;
+    }
+    /* .res_popup_container img {
+        width: 50vh;
+    } */
+    .res_popup_container .signPopPup img {
+        width: 25vh;
+        cursor: pointer;
+    }
+    #sub-page .title img {
+        width: 90% !important;
+    }
+    .perkMainContainer {
+        background-image: url('../assets/BG-Mobile.jpg') !important;
+        position: absolute;
+        width: 100%;
+        background-size: 100% 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+    .tnctxtBottom {
+        position: absolute;
+        bottom: 9px;
+        font-size: 10px !important;
+        /* right: 12px; */
+        left: 0;
+        right: 0;
+    }
+    .tnctxtBottom .green {
+        position: relative !important;
+        left: 0 !important;
+    }
+    .signIn img,
+    .signUp img {
+        width: 38vw !important;
+        cursor: pointer;
+    }
+    .sound img,
+    .star img {
+        width: 13vw !important;
+    }
+    #LoginPage .mobContainer .input {
+        width: 100% !important;
+        margin: 5px;
+    }
+    #LoginPage .mobContainer .input input {
+        height: 10vw !important;
+    }
+    #LoginPage .logo img {
+        width: 58vw !important;
+    }
+    #LoginPage .mobContainer .signUpBtn img {
+        width: 38vw !important;
+        cursor: pointer;
+    }
+    #formController {
+        flex-direction: column !important;
+        width: 100%;
+    }
+    #formPage .formContainer .signUpBtn img {
+        width: 38vw !important;
+    }
+    #formPage .formContainer .input input {
+        height: 11vw !important;
+    }
+    #formPage .formContainer .logo img {
+        width: 58vw !important;
+    }
+    #OtpPage .logo img {
+        width: 58vw !important;
+    }
+    #OtpPage .otpContainer .input input {
+        height: 11vw !important;
+    }
+    #OtpPage .otpContainer .verifyBtn img {
+        width: 18vw;
+    }
+    #OtpPage .otpContainer .input {
+        width: 100% !important;
+    }
+    #playNowPage .playNowContainer .tittleImg img {
+        width: 90% !important;
+    }
+    #playNowPage .playNowContainer .playNowBtn img {
+        width: 38vw !important;
+        cursor: pointer;
+    }
+    .userNameData {
+        font-size: 15px !important;
+    }
+    #playNowPage .nameIcon {
+        position: absolute;
+        top: -2vw;
+        width: 37% !important;
+    }
+    #OtpPage .otpContainer .verifyBtn img {
+        width: 38vw !important;
+        cursor: pointer;
+    }
+    .nameIconConatiner {
+        position: relative;
+        top: 4vw;
+        width: 100% !important;
+        left: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+    .res_popup_container {
+        width: 50vh;
+    }
+    /* .res_popup_container img {
+        width: 50vh;
+    } */
+    .res_popup_container .signPopPup img {
+        width: 30vh;
+        cursor: pointer;
+    }
+    #sub-page .title img {
+        width: 100% !important;
+    }
+    .perkMainContainer {
+        background-image: url('../assets/BG-Desktop.jpg') !important;
+        position: absolute;
+        width: 100%;
+        background-size: 100% 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+    .tnctxtBottom {
+        position: absolute;
+        bottom: 9px;
+        font-size: 10px !important;
+        /* right: 12px; */
+        left: 0;
+        right: 0;
+    }
+    .tnctxtBottom .green {
+        position: relative !important;
+        left: 0 !important;
+    }
+    .signIn img,
+    .signUp img {
+        width: 18vw !important;
+        cursor: pointer;
+    }
+    .sound img,
+    .star img {
+        width: 8vw !important;
+    }
+    #LoginPage .mobContainer .input {
+        width: 77% !important;
+        margin: 5px;
+    }
+    #LoginPage .mobContainer .input input {
+        height: 10vw !important;
+    }
+    #LoginPage .logo img {
+        width: 58vw !important;
+    }
+    #LoginPage .mobContainer .signUpBtn img {
+        width: 38vw !important;
+        cursor: pointer;
+    }
+    #formController {
+        flex-direction: column !important;
+        width: 75% !important;
+    }
+    #formPage .formContainer .signUpBtn img {
+        width: 18vw !important;
+    }
+    #formPage .formContainer .input input {
+        height: 11vw !important;
+    }
+    #formPage .formContainer .logo img {
+        width: 58vw !important;
+    }
+    #OtpPage .logo img {
+        width: 58vw !important;
+    }
+    #OtpPage .otpContainer .input input {
+        height: 11vw !important;
+    }
+    #OtpPage .otpContainer .verifyBtn img {
+        width: 18vw;
+    }
+    #OtpPage .otpContainer .input {
+        width: 77% !important;
+    }
+    #playNowPage .playNowContainer .tittleImg img {
+        width: 100% !important;
+    }
+    #playNowPage .playNowContainer .playNowBtn img {
+        width: 18vw !important;
+        cursor: pointer;
+    }
+    .userNameData {
+        font-size: 8px !important;
+    }
+    #playNowPage .nameIcon {
+        position: absolute;
+        top: -2vw;
+        width: 27% !important;
+    }
+}
+
+@media only screen and (max-device-width: 992px) and (orientation: landscape) {
+    .res_popup_container {
+        width: 50vh;
+    }
+    /* .res_popup_container img {
+        width: 50vh;
+    } */
+    .res_popup_container .signPopPup img {
+        width: 30vh;
+        cursor: pointer;
+    }
+    #formController {
+        flex-direction: row;
+        display: flex;
+        width: 100% !important;
+        text-align: center !important;
+        margin-top: 11vw !important;
+    }
+    .perkMainContainer #mainPage #sub-page .title img {
+        width: 24vw !important;
+    }
+    #formPage .formContainer .input {
+        /* width: 100%; */
+        margin: 0 auto !important;
+    }
+    #formPage .formContainer .input input {
+        height: 5vw !important;
+        width: 90% !important;
+    }
+    #formPage .formContainer .signUpBtn img {
+        width: 15vw !important;
+        cursor: pointer;
+        margin-top: 10px !important;
+    }
+    .perkMainContainer #mainPage #sub-page .title img {
+        width: 26vw;
+    }
+    .perkMainContainer .rightTopContainer .sound img {
+        width: 5vw !important;
+    }
+    .perkMainContainer .rightTopContainer .star img {
+        width: 5vw !important;
+    }
+    .playNowContainer .tittleImg img {
+        width: 28vw !important;
+    }
+    #OtpPage .otpContainer .input {
+        margin: 5px;
+        text-align: center;
+        width: 48%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .res_popup_container {
+        width: 75vh;
+    }
+    /*  .res_popup_container img {
+        width: 60vh;
+    } */
+    .res_popup_container .signPopPup img {
+        width: 30vh;
+        cursor: pointer;
+    }
+    #formController {
+        flex-direction: column !important;
+        width: 49% !important;
+    }
+    .nameIconConatiner {
+        position: relative;
+        top: 4vw;
+        width: 100% !important;
+        left: 10px;
+    }
+}
+
+.perkMainContainer {
+    background-image: url('../assets/BG-Desktop.jpg');
+    position: absolute;
+    width: 100%;
+    background-size: 100% 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.perkMainContainer .rightTopContainer {
+    position: absolute;
+    right: 10px;
+    text-align: right;
+    top: 2vw;
+    z-index: 1000;
+}
+
+.perkMainContainer .rightTopContainer .sound img {
+    width: 6vw;
+    cursor: pointer;
+}
+
+.perkMainContainer .rightTopContainer .star img {
+    width: 6vw;
+    cursor: pointer;
+}
+
+#mainPage {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+
+.perkMainContainer #mainPage #sub-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+}
+
+.perkMainContainer #mainPage #sub-page .title img {
+    width: 38vw;
+}
+
+.perkMainContainer #mainPage #sub-page .mainButton {
+    display: flex;
+    align-items: center;
+}
+
+.perkMainContainer #mainPage #sub-page .mainButton .signIn {
+    text-align: right;
+}
+
+.perkMainContainer #mainPage #sub-page .mainButton .signIn img {
+    width: 14vw;
+    cursor: pointer;
+}
+
+.perkMainContainer #mainPage #sub-page .mainButton .signUp {
+    text-align: start;
+}
+
+.perkMainContainer #mainPage #sub-page .mainButton .signUp img {
+    width: 14vw;
+    cursor: pointer;
+}
+
+.perkMainContainer #mainPage #sub-page .tnctxtBottom {
+    font-family: 'perkFont';
+    color: #283171;
+    display: flex;
+    gap: 28px;
+    margin-top: 19px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.perkMainContainer #mainPage #sub-page .tnctxtBottom .green {
+    position: absolute;
+    left: 18px;
+}
+
+.perkMainContainer #mainPage #sub-page .tnctxtBottom .green img {
+    width: 33%;
+}
+
+
+/* form css */
+
+#formPage {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+
+#formPage .formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    margin-top: 2vw;
+}
+
+.formContainer .logo {
+    position: absolute;
+    top: 0;
+    margin-top: 3vw;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#formPage .formContainer .logo img {
+    width: 15vw;
+}
+
+#formPage .formContainer .input {
+    width: 100%;
+    margin: 5px auto;
+}
+
+#formPage .formContainer .input input {
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    background: #283171;
+    height: 4vw;
+    width: 92%;
+    text-align: center;
+    color: #fff;
+    font-family: 'perkFont2';
+    font-size: 20px;
+}
+
+#formPage .formContainer .input input ::placeholder {
+    color: #fff;
+}
+
+#formPage .formContainer .tncConatiner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'perkFont2';
+    font-size: 16px;
+}
+
+#formPage .formContainer .tncConatiner .t1 {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: start;
+}
+
+#formPage .formContainer .tncConatiner .t1 input[type="radio"] {
+    display: none;
+}
+
+#formPage .formContainer .tncConatiner .t1 label {
+    display: inline-block;
+    border-radius: 62%;
+    background-image: url(../assets/bullet1.png);
+    height: 34px;
+    width: 34px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+#formPage .formContainer .tncConatiner .t1 input[type="radio"]:checked+label {
+    background: url(../assets/bullet2.png);
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+#formPage .formContainer .tncConatiner .t2 {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: start;
+}
+
+#formPage .formContainer .tncConatiner .t2 input[type="radio"] {
+    display: none;
+}
+
+#formPage .formContainer .tncConatiner .t2 label {
+    display: inline-block;
+    border-radius: 62%;
+    background-image: url(../assets/bullet1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    height: 34px;
+    width: 34px;
+}
+
+#formController {
+    display: flex;
+    /* flex-direction: column; */
+    width: 100%;
+    margin-top: 3vw;
+    text-align: center;
+}
+
+#formPage .formContainer .tncConatiner .t2 input[type="radio"]:checked+label {
+    background: url(../assets/bullet2.png);
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+#formPage .formContainer .signUpBtn {
+    text-align: center;
+}
+
+#formPage .formContainer .signUpBtn img {
+    width: 15vw;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+/* Otp */
+
+#OtpPage {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+
+#OtpPage .otpContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    gap: 1vw;
+    margin-top: 10vw;
+}
+
+#OtpPage .logo {
+    position: absolute;
+    top: 0;
+    margin-top: 3vw;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#OtpPage .logo img {
+    width: 20vw;
+}
+
+#OtpPage .otpContainer .input {
+    margin: 5px;
+    text-align: center;
+    width: 48%;
+}
+
+#OtpPage .otpContainer .input input {
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    background: #283171;
+    height: 5vw;
+    width: 84%;
+    text-align: center;
+    color: #fff;
+    font-family: 'perkFont2';
+    font-size: 20px;
+}
+
+#OtpPage .otpContainer .input input ::placeholder {
+    color: #fff;
+}
+
+#OtpPage .otpContainer .verifyBtn {
+    text-align: center;
+}
+
+#OtpPage .otpContainer .verifyBtn img {
+    width: 18vw;
+    cursor: pointer;
+}
+
+
+/* login */
+
+#LoginPage {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+
+#LoginPage .mobContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    gap: 1vw;
+    margin-top: 10vw;
+}
+
+#LoginPage .logo {
+    position: absolute;
+    top: 0;
+    margin-top: 3vw;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#LoginPage .mobContainer .input {
+    width: 48%;
+    margin: 5px;
+    text-align: center;
+}
+
+#LoginPage .mobContainer .input input {
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    background: #283171;
+    height: 5vw;
+    width: 84%;
+    text-align: center;
+    color: #fff;
+    font-family: 'perkFont2';
+    font-size: 20px;
+}
+
+#LoginPage .logo img {
+    width: 20vw;
+}
+
+#LoginPage .mobContainer .signUpBtn {
+    text-align: center;
+}
+
+#LoginPage .mobContainer .signUpBtn img {
+    width: 18vw;
+    cursor: pointer;
+}
+
+
+/* playNow */
+
+#playNowPage {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+
+#playNowPage .nameIcon {
+    position: absolute;
+    top: -2vw;
+    width: 21%;
+}
+
+#playNowPage .nameIcon img {
+    width: 100%;
+}
+
+#playNowPage .playNowContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#playNowPage .playNowContainer .tittleImg {
+    text-align: center;
+}
+
+#playNowPage .playNowContainer .tittleImg img {
+    width: 28vw;
+}
+
+#playNowPage .playNowContainer .playNowBtn {
+    text-align: center;
+}
+
+#playNowPage .playNowContainer .playNowBtn img {
+    width: 14vw;
+    cursor: pointer;
+}
